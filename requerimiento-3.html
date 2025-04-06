@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimiento 3</title>
+    <link rel="stylesheet" href="./assets/css/style-3.css">
+</head>
+<body>
+<h1>Ingresa el password</h1>
+<div>
+    <select name="number1" id="number-1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <select name="number2" id="number-2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <select name="number3" id="number-3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+</div>
+<button onclick="
+    value1 = 100 * Number(document.querySelector('#number-1').value)
+    value2 = 10 * Number(document.querySelector('#number-2').value)
+    value3 = Number(document.querySelector('#number-3').value)
+    result = document.querySelector('#text')
+    sum = value1 + value2 + value3
+    if(sum == 911){
+        result.style.color = 'green'
+        result.innerHTML = 'Password 1 correcto'
+    }else if(sum == 714){
+        result.style.color = 'green'
+        result.innerHTML = 'Password 2 correcto'
+    }else{
+        result.style.color = 'red'
+        result.innerHTML = 'Password incorrecto'
+    }
+">Ingresar</button>
+<p id="text"></p>
+</body>
+</html>

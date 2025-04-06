@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimiento 2</title>
+    <link rel="stylesheet" href="./assets/css/style-2.css">
+</head>
+<body>
+    <p>Puedes llevar hasta 10 stickers en total.</p>
+    <div class="stickers">
+        <div class="card">
+            <div class="img-card"></div>
+            <img src="./assets/img/captain.png" alt="Imagen Guinzu">
+            <input type="number" min="0" onkeydown="return validarTeclaPositiva(event)" oninput="this.value = this.value.replace(/-/g, '')" step="1" id="input-1"/>
+        </div>
+        <div class="card">
+            <div class="img-card"></div>
+            <img src="./assets/img/guinzu.png" alt="Imagen Guinzu">
+            <input type="number" min="0" onkeydown="return validarTeclaPositiva(event)" oninput="this.value = this.value.replace(/-/g, '')" step="1" id="input-2"/>
+        </div>
+        <div class="card">
+            <div class="img-card"></div>
+            <img src="./assets/img/mack.png" alt="Imagen Mack">
+            <input type="number" min="0" onkeydown="return validarTeclaPositiva(event)" oninput="this.value = this.value.replace(/-/g, '')" step="1" id="input-3"/>
+        </div>
+    </div>
+    <p id="text"></p>
+    <button onclick="
+        quantity1 = Number(document.querySelector('#input-1').value)
+        quantity2 = Number(document.querySelector('#input-2').value)
+        quantity3 = Number(document.querySelector('#input-3').value)
+        sum = quantity1+quantity2+quantity3
+        result = document.querySelector('#text')
+        if(sum <= 10){
+            result.innerHTML = 'Llevas ' + sum + ' stickers'
+        }else{
+            result.innerHTML = 'Llevas demasiados stickers'
+        }
+    ">Verificar</button>
+</body>
+</html>
